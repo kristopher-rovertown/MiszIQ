@@ -40,27 +40,50 @@ struct EstimationGame: View {
         EstimationQuestion(prompt: "How many countries in Africa?", actualValue: 54, unit: "countries", minSlider: 20, maxSlider: 80, hint: "Geography"),
         EstimationQuestion(prompt: "How many teeth does an adult human have?", actualValue: 32, unit: "teeth", minSlider: 16, maxSlider: 48, hint: "Anatomy"),
         EstimationQuestion(prompt: "How many cards in a standard deck?", actualValue: 52, unit: "cards", minSlider: 30, maxSlider: 80, hint: "Games"),
-        
+        EstimationQuestion(prompt: "How many chromosomes in a human cell?", actualValue: 46, unit: "chromosomes", minSlider: 20, maxSlider: 80, hint: "Biology"),
+        EstimationQuestion(prompt: "How many elements in the periodic table?", actualValue: 118, unit: "elements", minSlider: 80, maxSlider: 150, hint: "Chemistry"),
+        EstimationQuestion(prompt: "How many squares on a chess board?", actualValue: 64, unit: "squares", minSlider: 36, maxSlider: 100, hint: "Games"),
+        EstimationQuestion(prompt: "How many players on a soccer team?", actualValue: 11, unit: "players", minSlider: 5, maxSlider: 18, hint: "Sports"),
+        EstimationQuestion(prompt: "How many letters in the English alphabet?", actualValue: 26, unit: "letters", minSlider: 20, maxSlider: 35, hint: "Language"),
+
         // Percentages
         EstimationQuestion(prompt: "What percent of Earth's surface is water?", actualValue: 71, unit: "%", minSlider: 40, maxSlider: 95, hint: "Geography"),
         EstimationQuestion(prompt: "What percent of the human body is water?", actualValue: 60, unit: "%", minSlider: 30, maxSlider: 90, hint: "Biology"),
         EstimationQuestion(prompt: "What percent of Earth's atmosphere is nitrogen?", actualValue: 78, unit: "%", minSlider: 40, maxSlider: 100, hint: "Science"),
-        
+        EstimationQuestion(prompt: "What percent of the brain is fat?", actualValue: 60, unit: "%", minSlider: 20, maxSlider: 80, hint: "Biology"),
+        EstimationQuestion(prompt: "What percent of Earth is covered by forests?", actualValue: 31, unit: "%", minSlider: 10, maxSlider: 60, hint: "Geography"),
+        EstimationQuestion(prompt: "What percent of oxygen is in air?", actualValue: 21, unit: "%", minSlider: 10, maxSlider: 40, hint: "Science"),
+
         // Distances/Sizes
         EstimationQuestion(prompt: "Height of the Eiffel Tower in meters?", actualValue: 330, unit: "m", minSlider: 150, maxSlider: 500, hint: "Architecture"),
         EstimationQuestion(prompt: "Length of a marathon in kilometers?", actualValue: 42, unit: "km", minSlider: 20, maxSlider: 60, hint: "Sports"),
         EstimationQuestion(prompt: "Speed of sound in m/s (at sea level)?", actualValue: 343, unit: "m/s", minSlider: 200, maxSlider: 500, hint: "Physics"),
-        
+        EstimationQuestion(prompt: "Height of Mount Everest in meters?", actualValue: 8849, unit: "m", minSlider: 6000, maxSlider: 12000, hint: "Geography"),
+        EstimationQuestion(prompt: "Depth of the Mariana Trench in meters?", actualValue: 10994, unit: "m", minSlider: 5000, maxSlider: 15000, hint: "Geography"),
+        EstimationQuestion(prompt: "Length of the Great Wall of China in km?", actualValue: 21196, unit: "km", minSlider: 5000, maxSlider: 30000, hint: "Architecture"),
+        EstimationQuestion(prompt: "Diameter of the Moon in kilometers?", actualValue: 3474, unit: "km", minSlider: 2000, maxSlider: 5000, hint: "Astronomy"),
+        EstimationQuestion(prompt: "Average depth of the ocean in meters?", actualValue: 3688, unit: "m", minSlider: 1500, maxSlider: 6000, hint: "Geography"),
+
         // Time
         EstimationQuestion(prompt: "How many days in a year?", actualValue: 365, unit: "days", minSlider: 300, maxSlider: 400, hint: "Calendar"),
         EstimationQuestion(prompt: "Average human heart beats per minute?", actualValue: 72, unit: "bpm", minSlider: 40, maxSlider: 120, hint: "Biology"),
         EstimationQuestion(prompt: "Hours of daylight at equator on equinox?", actualValue: 12, unit: "hours", minSlider: 6, maxSlider: 18, hint: "Astronomy"),
-        
+        EstimationQuestion(prompt: "Average human lifespan in years?", actualValue: 73, unit: "years", minSlider: 50, maxSlider: 100, hint: "Biology"),
+        EstimationQuestion(prompt: "How many seconds in an hour?", actualValue: 3600, unit: "seconds", minSlider: 2000, maxSlider: 5000, hint: "Math"),
+        EstimationQuestion(prompt: "How many hours does a koala sleep per day?", actualValue: 22, unit: "hours", minSlider: 10, maxSlider: 24, hint: "Animals"),
+        EstimationQuestion(prompt: "Length of an Olympic swimming pool in meters?", actualValue: 50, unit: "m", minSlider: 25, maxSlider: 100, hint: "Sports"),
+
         // Misc
         EstimationQuestion(prompt: "Number of US states?", actualValue: 50, unit: "states", minSlider: 30, maxSlider: 70, hint: "Geography"),
         EstimationQuestion(prompt: "Boiling point of water in °C?", actualValue: 100, unit: "°C", minSlider: 60, maxSlider: 150, hint: "Science"),
         EstimationQuestion(prompt: "Freezing point of water in °F?", actualValue: 32, unit: "°F", minSlider: 0, maxSlider: 60, hint: "Science"),
         EstimationQuestion(prompt: "How many minutes in a day?", actualValue: 1440, unit: "min", minSlider: 800, maxSlider: 2000, hint: "Math"),
+        EstimationQuestion(prompt: "How many muscles in the human body?", actualValue: 600, unit: "muscles", minSlider: 300, maxSlider: 900, hint: "Anatomy"),
+        EstimationQuestion(prompt: "Speed of light in km per second?", actualValue: 300000, unit: "km/s", minSlider: 150000, maxSlider: 400000, hint: "Physics"),
+        EstimationQuestion(prompt: "Average temperature on Mars in °C?", actualValue: -60, unit: "°C", minSlider: -120, maxSlider: 0, hint: "Astronomy"),
+        EstimationQuestion(prompt: "How many taste buds on human tongue?", actualValue: 10000, unit: "buds", minSlider: 3000, maxSlider: 20000, hint: "Anatomy"),
+        EstimationQuestion(prompt: "Weight of an adult blue whale in tons?", actualValue: 150, unit: "tons", minSlider: 50, maxSlider: 250, hint: "Animals"),
+        EstimationQuestion(prompt: "How many species of birds exist?", actualValue: 10000, unit: "species", minSlider: 5000, maxSlider: 20000, hint: "Animals"),
     ]
     
     var body: some View {

@@ -25,14 +25,25 @@ struct WordRecallGame: View {
     }
     
     let wordBank = [
-        // Common nouns
+        // Common nouns - Nature
         "apple", "river", "mountain", "garden", "bridge", "castle", "forest", "ocean",
         "sunset", "thunder", "crystal", "shadow", "whisper", "journey", "harmony", "mystery",
         "village", "temple", "dragon", "phoenix", "meadow", "canyon", "island", "desert",
         "palace", "harbor", "valley", "glacier", "volcano", "rainbow", "lantern", "compass",
-        // Abstract
+        // Common nouns - Objects
+        "anchor", "blanket", "candle", "diamond", "feather", "guitar", "hammer", "jacket",
+        "ladder", "mirror", "needle", "pillow", "ribbon", "saddle", "trumpet", "velvet",
+        // Common nouns - Animals
+        "falcon", "giraffe", "dolphin", "panther", "penguin", "sparrow", "tiger", "whale",
+        "buffalo", "cheetah", "leopard", "mustang", "peacock", "raccoon", "serpent", "vulture",
+        // Common nouns - Places
+        "airport", "bakery", "chapel", "factory", "gallery", "library", "museum", "stadium",
+        "theater", "tunnel", "citadel", "fortress", "kingdom", "mansion", "pyramid", "sanctuary",
+        // Abstract concepts
         "freedom", "wisdom", "courage", "silence", "wonder", "patience", "kindness", "strength",
-        "balance", "clarity", "serenity", "passion", "triumph", "legacy", "vision", "spirit"
+        "balance", "clarity", "serenity", "passion", "triumph", "legacy", "vision", "spirit",
+        "destiny", "eternity", "fantasy", "gratitude", "honesty", "infinity", "justice", "loyalty",
+        "memory", "nobility", "promise", "quality", "reality", "success", "truth", "virtue"
     ]
     
     var wordsPerRound: Int { 4 + level }

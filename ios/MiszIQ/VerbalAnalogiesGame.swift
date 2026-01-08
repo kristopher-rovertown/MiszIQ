@@ -32,7 +32,7 @@ struct VerbalAnalogiesGame: View {
     }
     
     let analogiesByLevel: [[Analogy]] = [
-        // Level 1 - Simple relationships
+        // Level 1 - Simple relationships (15 analogies)
         [
             Analogy(wordA: "Hot", wordB: "Cold", wordC: "Up", options: ["Down", "High", "Sky", "Left"], correctIndex: 0, relationship: "Opposites"),
             Analogy(wordA: "Dog", wordB: "Puppy", wordC: "Cat", options: ["Kitten", "Feline", "Pet", "Mouse"], correctIndex: 0, relationship: "Adult to young"),
@@ -40,8 +40,17 @@ struct VerbalAnalogiesGame: View {
             Analogy(wordA: "Bird", wordB: "Fly", wordC: "Fish", options: ["Swim", "Water", "Fin", "Scale"], correctIndex: 0, relationship: "Animal to movement"),
             Analogy(wordA: "Day", wordB: "Night", wordC: "Summer", options: ["Winter", "Hot", "Sun", "Season"], correctIndex: 0, relationship: "Opposites"),
             Analogy(wordA: "Book", wordB: "Read", wordC: "Song", options: ["Listen", "Music", "Note", "Sing"], correctIndex: 0, relationship: "Object to action"),
+            Analogy(wordA: "Pen", wordB: "Write", wordC: "Knife", options: ["Cut", "Sharp", "Kitchen", "Metal"], correctIndex: 0, relationship: "Tool to action"),
+            Analogy(wordA: "Cow", wordB: "Calf", wordC: "Horse", options: ["Foal", "Stable", "Ride", "Mane"], correctIndex: 0, relationship: "Adult to young"),
+            Analogy(wordA: "Big", wordB: "Small", wordC: "Fast", options: ["Slow", "Quick", "Run", "Speed"], correctIndex: 0, relationship: "Opposites"),
+            Analogy(wordA: "Apple", wordB: "Fruit", wordC: "Carrot", options: ["Vegetable", "Orange", "Garden", "Eat"], correctIndex: 0, relationship: "Example to category"),
+            Analogy(wordA: "Eye", wordB: "See", wordC: "Ear", options: ["Hear", "Sound", "Head", "Music"], correctIndex: 0, relationship: "Organ to function"),
+            Analogy(wordA: "Shoe", wordB: "Foot", wordC: "Hat", options: ["Head", "Hair", "Wear", "Top"], correctIndex: 0, relationship: "Clothing to body part"),
+            Analogy(wordA: "Bee", wordB: "Hive", wordC: "Ant", options: ["Colony", "Small", "Bug", "Work"], correctIndex: 0, relationship: "Animal to home"),
+            Analogy(wordA: "Sad", wordB: "Cry", wordC: "Happy", options: ["Laugh", "Joy", "Smile", "Fun"], correctIndex: 0, relationship: "Emotion to expression"),
+            Analogy(wordA: "Milk", wordB: "White", wordC: "Grass", options: ["Green", "Grow", "Field", "Soft"], correctIndex: 0, relationship: "Object to color"),
         ],
-        // Level 2 - Moderate relationships
+        // Level 2 - Moderate relationships (15 analogies)
         [
             Analogy(wordA: "Author", wordB: "Book", wordC: "Composer", options: ["Symphony", "Piano", "Conductor", "Note"], correctIndex: 0, relationship: "Creator to creation"),
             Analogy(wordA: "Hungry", wordB: "Eat", wordC: "Tired", options: ["Sleep", "Bed", "Yawn", "Night"], correctIndex: 0, relationship: "State to remedy"),
@@ -49,8 +58,17 @@ struct VerbalAnalogiesGame: View {
             Analogy(wordA: "Doctor", wordB: "Hospital", wordC: "Teacher", options: ["School", "Student", "Lesson", "Book"], correctIndex: 0, relationship: "Professional to workplace"),
             Analogy(wordA: "Hammer", wordB: "Nail", wordC: "Screwdriver", options: ["Screw", "Tool", "Turn", "Fix"], correctIndex: 0, relationship: "Tool to object"),
             Analogy(wordA: "Chapter", wordB: "Book", wordC: "Verse", options: ["Poem", "Word", "Rhyme", "Line"], correctIndex: 0, relationship: "Part to whole"),
+            Analogy(wordA: "Painter", wordB: "Canvas", wordC: "Sculptor", options: ["Clay", "Art", "Museum", "Statue"], correctIndex: 0, relationship: "Artist to medium"),
+            Analogy(wordA: "Electricity", wordB: "Wire", wordC: "Water", options: ["Pipe", "Wet", "Drink", "Ocean"], correctIndex: 0, relationship: "Resource to conduit"),
+            Analogy(wordA: "Lawyer", wordB: "Court", wordC: "Chef", options: ["Kitchen", "Food", "Cook", "Recipe"], correctIndex: 0, relationship: "Professional to workplace"),
+            Analogy(wordA: "Caterpillar", wordB: "Butterfly", wordC: "Tadpole", options: ["Frog", "Pond", "Swim", "Green"], correctIndex: 0, relationship: "Young to adult form"),
+            Analogy(wordA: "Soldier", wordB: "Army", wordC: "Player", options: ["Team", "Game", "Win", "Sport"], correctIndex: 0, relationship: "Individual to group"),
+            Analogy(wordA: "Thermometer", wordB: "Temperature", wordC: "Speedometer", options: ["Speed", "Car", "Fast", "Dashboard"], correctIndex: 0, relationship: "Instrument to measurement"),
+            Analogy(wordA: "Key", wordB: "Lock", wordC: "Password", options: ["Account", "Secret", "Type", "Computer"], correctIndex: 0, relationship: "Opener to barrier"),
+            Analogy(wordA: "Flour", wordB: "Bread", wordC: "Grapes", options: ["Wine", "Fruit", "Purple", "Vine"], correctIndex: 0, relationship: "Ingredient to product"),
+            Analogy(wordA: "Pilot", wordB: "Airplane", wordC: "Captain", options: ["Ship", "Sea", "Sail", "Crew"], correctIndex: 0, relationship: "Operator to vehicle"),
         ],
-        // Level 3 - Complex relationships
+        // Level 3 - Complex relationships (15 analogies)
         [
             Analogy(wordA: "Eloquent", wordB: "Speech", wordC: "Graceful", options: ["Dance", "Beauty", "Elegant", "Move"], correctIndex: 0, relationship: "Quality to expression"),
             Analogy(wordA: "Vaccine", wordB: "Prevent", wordC: "Medicine", options: ["Cure", "Doctor", "Sick", "Hospital"], correctIndex: 0, relationship: "Treatment to purpose"),
@@ -58,6 +76,15 @@ struct VerbalAnalogiesGame: View {
             Analogy(wordA: "Monarch", wordB: "Kingdom", wordC: "President", options: ["Republic", "Election", "Power", "Leader"], correctIndex: 0, relationship: "Ruler to domain"),
             Analogy(wordA: "Chronological", wordB: "Time", wordC: "Alphabetical", options: ["Letters", "Order", "Words", "Sequence"], correctIndex: 0, relationship: "Order type to basis"),
             Analogy(wordA: "Hypothesis", wordB: "Experiment", wordC: "Blueprint", options: ["Construction", "Building", "Plan", "Design"], correctIndex: 0, relationship: "Plan to execution"),
+            Analogy(wordA: "Nomad", wordB: "Wander", wordC: "Hermit", options: ["Isolate", "Cave", "Alone", "Quiet"], correctIndex: 0, relationship: "Person to characteristic action"),
+            Analogy(wordA: "Famine", wordB: "Hunger", wordC: "Drought", options: ["Thirst", "Rain", "Desert", "Dry"], correctIndex: 0, relationship: "Disaster to consequence"),
+            Analogy(wordA: "Preamble", wordB: "Document", wordC: "Overture", options: ["Opera", "Music", "Begin", "Stage"], correctIndex: 0, relationship: "Introduction to work"),
+            Analogy(wordA: "Altruistic", wordB: "Selfless", wordC: "Pragmatic", options: ["Practical", "Smart", "Logical", "Real"], correctIndex: 0, relationship: "Synonyms"),
+            Analogy(wordA: "Archipelago", wordB: "Islands", wordC: "Constellation", options: ["Stars", "Night", "Space", "Pattern"], correctIndex: 0, relationship: "Collection to components"),
+            Analogy(wordA: "Anesthesia", wordB: "Pain", wordC: "Censorship", options: ["Information", "Government", "Media", "Ban"], correctIndex: 0, relationship: "Suppressor to target"),
+            Analogy(wordA: "Plagiarism", wordB: "Writing", wordC: "Counterfeiting", options: ["Currency", "Crime", "Fake", "Money"], correctIndex: 0, relationship: "Fraud type to domain"),
+            Analogy(wordA: "Herbivore", wordB: "Plants", wordC: "Carnivore", options: ["Meat", "Animals", "Hunt", "Teeth"], correctIndex: 0, relationship: "Eater to food source"),
+            Analogy(wordA: "Euphoria", wordB: "Joy", wordC: "Melancholy", options: ["Sadness", "Mood", "Quiet", "Tears"], correctIndex: 0, relationship: "Intense form to basic emotion"),
         ]
     ]
     

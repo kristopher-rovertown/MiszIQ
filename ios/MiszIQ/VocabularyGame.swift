@@ -30,7 +30,7 @@ struct VocabularyGame: View {
     }
     
     let questionsByLevel: [[VocabQuestion]] = [
-        // Level 1 - Common words
+        // Level 1 - Common words (15 questions)
         [
             VocabQuestion(word: "Abundant", partOfSpeech: "adjective", options: ["Plentiful", "Scarce", "Empty", "Broken"], correctIndex: 0, exampleSentence: "The garden had abundant flowers."),
             VocabQuestion(word: "Hesitate", partOfSpeech: "verb", options: ["Rush", "Pause", "Continue", "Finish"], correctIndex: 1, exampleSentence: "Don't hesitate to ask for help."),
@@ -38,8 +38,17 @@ struct VocabularyGame: View {
             VocabQuestion(word: "Peculiar", partOfSpeech: "adjective", options: ["Normal", "Strange", "Common", "Simple"], correctIndex: 1, exampleSentence: "He had a peculiar way of walking."),
             VocabQuestion(word: "Tranquil", partOfSpeech: "adjective", options: ["Noisy", "Chaotic", "Peaceful", "Active"], correctIndex: 2, exampleSentence: "The lake was tranquil at dawn."),
             VocabQuestion(word: "Conceal", partOfSpeech: "verb", options: ["Hide", "Show", "Find", "Lose"], correctIndex: 0, exampleSentence: "He tried to conceal his disappointment."),
+            VocabQuestion(word: "Eager", partOfSpeech: "adjective", options: ["Reluctant", "Enthusiastic", "Tired", "Calm"], correctIndex: 1, exampleSentence: "The students were eager to learn."),
+            VocabQuestion(word: "Fragile", partOfSpeech: "adjective", options: ["Strong", "Delicate", "Heavy", "Solid"], correctIndex: 1, exampleSentence: "Handle the fragile vase carefully."),
+            VocabQuestion(word: "Glimpse", partOfSpeech: "noun", options: ["Long look", "Brief view", "Blind spot", "Clear sight"], correctIndex: 1, exampleSentence: "I caught a glimpse of the deer."),
+            VocabQuestion(word: "Humble", partOfSpeech: "adjective", options: ["Arrogant", "Modest", "Proud", "Loud"], correctIndex: 1, exampleSentence: "Despite his success, he remained humble."),
+            VocabQuestion(word: "Imitate", partOfSpeech: "verb", options: ["Create", "Copy", "Ignore", "Destroy"], correctIndex: 1, exampleSentence: "Children often imitate their parents."),
+            VocabQuestion(word: "Jovial", partOfSpeech: "adjective", options: ["Sad", "Cheerful", "Angry", "Quiet"], correctIndex: 1, exampleSentence: "The jovial host welcomed everyone."),
+            VocabQuestion(word: "Keen", partOfSpeech: "adjective", options: ["Dull", "Sharp", "Slow", "Weak"], correctIndex: 1, exampleSentence: "She has a keen eye for detail."),
+            VocabQuestion(word: "Linger", partOfSpeech: "verb", options: ["Rush", "Stay", "Leave", "Run"], correctIndex: 1, exampleSentence: "The smell of coffee lingered in the air."),
+            VocabQuestion(word: "Mend", partOfSpeech: "verb", options: ["Break", "Repair", "Destroy", "Ignore"], correctIndex: 1, exampleSentence: "She learned to mend torn clothes."),
         ],
-        // Level 2 - Intermediate words
+        // Level 2 - Intermediate words (15 questions)
         [
             VocabQuestion(word: "Meticulous", partOfSpeech: "adjective", options: ["Careless", "Thorough", "Quick", "Lazy"], correctIndex: 1, exampleSentence: "She was meticulous in her research."),
             VocabQuestion(word: "Ephemeral", partOfSpeech: "adjective", options: ["Permanent", "Short-lived", "Ancient", "Recurring"], correctIndex: 1, exampleSentence: "The beauty of cherry blossoms is ephemeral."),
@@ -47,8 +56,17 @@ struct VocabularyGame: View {
             VocabQuestion(word: "Ambiguous", partOfSpeech: "adjective", options: ["Clear", "Uncertain", "Definite", "Obvious"], correctIndex: 1, exampleSentence: "The message was ambiguous."),
             VocabQuestion(word: "Eloquent", partOfSpeech: "adjective", options: ["Articulate", "Silent", "Confused", "Boring"], correctIndex: 0, exampleSentence: "The speaker was eloquent and persuasive."),
             VocabQuestion(word: "Benevolent", partOfSpeech: "adjective", options: ["Cruel", "Kind", "Neutral", "Angry"], correctIndex: 1, exampleSentence: "The benevolent king helped his people."),
+            VocabQuestion(word: "Candid", partOfSpeech: "adjective", options: ["Deceptive", "Honest", "Secretive", "Shy"], correctIndex: 1, exampleSentence: "She gave a candid interview about her life."),
+            VocabQuestion(word: "Diligent", partOfSpeech: "adjective", options: ["Lazy", "Hardworking", "Careless", "Slow"], correctIndex: 1, exampleSentence: "The diligent student earned top grades."),
+            VocabQuestion(word: "Elusive", partOfSpeech: "adjective", options: ["Easy to find", "Hard to catch", "Common", "Obvious"], correctIndex: 1, exampleSentence: "The elusive butterfly escaped capture."),
+            VocabQuestion(word: "Feasible", partOfSpeech: "adjective", options: ["Impossible", "Possible", "Unlikely", "Forbidden"], correctIndex: 1, exampleSentence: "The plan seemed feasible with enough resources."),
+            VocabQuestion(word: "Gregarious", partOfSpeech: "adjective", options: ["Shy", "Sociable", "Quiet", "Lonely"], correctIndex: 1, exampleSentence: "Her gregarious nature made her popular."),
+            VocabQuestion(word: "Haphazard", partOfSpeech: "adjective", options: ["Organized", "Random", "Careful", "Planned"], correctIndex: 1, exampleSentence: "The books were arranged in a haphazard manner."),
+            VocabQuestion(word: "Impartial", partOfSpeech: "adjective", options: ["Biased", "Fair", "Prejudiced", "Unfair"], correctIndex: 1, exampleSentence: "The judge remained impartial throughout the trial."),
+            VocabQuestion(word: "Lethargic", partOfSpeech: "adjective", options: ["Energetic", "Sluggish", "Active", "Alert"], correctIndex: 1, exampleSentence: "The heat made everyone feel lethargic."),
+            VocabQuestion(word: "Mundane", partOfSpeech: "adjective", options: ["Exciting", "Ordinary", "Unusual", "Thrilling"], correctIndex: 1, exampleSentence: "She was bored by mundane daily tasks."),
         ],
-        // Level 3 - Advanced words
+        // Level 3 - Advanced words (15 questions)
         [
             VocabQuestion(word: "Ubiquitous", partOfSpeech: "adjective", options: ["Rare", "Everywhere", "Hidden", "Unique"], correctIndex: 1, exampleSentence: "Smartphones have become ubiquitous."),
             VocabQuestion(word: "Juxtapose", partOfSpeech: "verb", options: ["Separate", "Place side by side", "Remove", "Ignore"], correctIndex: 1, exampleSentence: "The artist juxtaposed light and dark."),
@@ -56,6 +74,15 @@ struct VocabularyGame: View {
             VocabQuestion(word: "Ineffable", partOfSpeech: "adjective", options: ["Expressible", "Indescribable", "Ordinary", "Forgettable"], correctIndex: 1, exampleSentence: "The view was of ineffable beauty."),
             VocabQuestion(word: "Perfunctory", partOfSpeech: "adjective", options: ["Thorough", "Enthusiastic", "Halfhearted", "Careful"], correctIndex: 2, exampleSentence: "He gave a perfunctory nod."),
             VocabQuestion(word: "Obfuscate", partOfSpeech: "verb", options: ["Clarify", "Confuse", "Explain", "Simplify"], correctIndex: 1, exampleSentence: "The politician tried to obfuscate the issue."),
+            VocabQuestion(word: "Cacophony", partOfSpeech: "noun", options: ["Harmony", "Harsh noise", "Silence", "Melody"], correctIndex: 1, exampleSentence: "The construction site was a cacophony of sounds."),
+            VocabQuestion(word: "Dogmatic", partOfSpeech: "adjective", options: ["Flexible", "Opinionated", "Open-minded", "Uncertain"], correctIndex: 1, exampleSentence: "His dogmatic views made debate difficult."),
+            VocabQuestion(word: "Esoteric", partOfSpeech: "adjective", options: ["Common", "Obscure", "Popular", "Simple"], correctIndex: 1, exampleSentence: "The lecture covered esoteric philosophical concepts."),
+            VocabQuestion(word: "Fastidious", partOfSpeech: "adjective", options: ["Careless", "Very particular", "Messy", "Relaxed"], correctIndex: 1, exampleSentence: "She was fastidious about her appearance."),
+            VocabQuestion(word: "Garrulous", partOfSpeech: "adjective", options: ["Quiet", "Talkative", "Shy", "Reserved"], correctIndex: 1, exampleSentence: "The garrulous guest dominated the conversation."),
+            VocabQuestion(word: "Iconoclast", partOfSpeech: "noun", options: ["Traditionalist", "Rebel", "Follower", "Conservative"], correctIndex: 1, exampleSentence: "The artist was an iconoclast who challenged conventions."),
+            VocabQuestion(word: "Laconic", partOfSpeech: "adjective", options: ["Wordy", "Brief", "Elaborate", "Lengthy"], correctIndex: 1, exampleSentence: "His laconic reply was just one word: 'No.'"),
+            VocabQuestion(word: "Mercurial", partOfSpeech: "adjective", options: ["Stable", "Unpredictable", "Calm", "Steady"], correctIndex: 1, exampleSentence: "Her mercurial moods were hard to follow."),
+            VocabQuestion(word: "Pernicious", partOfSpeech: "adjective", options: ["Beneficial", "Harmful", "Helpful", "Kind"], correctIndex: 1, exampleSentence: "The pernicious rumors damaged her reputation."),
         ]
     ]
     

@@ -31,7 +31,7 @@ struct LogicPuzzleGame: View {
     }
     
     let puzzles: [[LogicPuzzle]] = [
-        // Level 1 - Simple comparisons
+        // Level 1 - Simple comparisons (10 puzzles)
         [
             LogicPuzzle(
                 premise: ["Alice is taller than Bob.", "Bob is taller than Carol."],
@@ -61,8 +61,50 @@ struct LogicPuzzleGame: View {
                 correctIndex: 1,
                 explanation: "If P then Q, and P is true, therefore Q must be true."
             ),
+            LogicPuzzle(
+                premise: ["All birds have feathers.", "Sparrows are birds."],
+                question: "What can we conclude about sparrows?",
+                options: ["Sparrows don't have feathers", "Sparrows have feathers", "Sparrows can't fly", "Nothing"],
+                correctIndex: 1,
+                explanation: "Since all birds have feathers and sparrows are birds, sparrows have feathers."
+            ),
+            LogicPuzzle(
+                premise: ["Emma is older than Fiona.", "Grace is older than Emma."],
+                question: "Who is the oldest?",
+                options: ["Emma", "Fiona", "Grace", "Cannot determine"],
+                correctIndex: 2,
+                explanation: "Grace > Emma > Fiona, so Grace is oldest."
+            ),
+            LogicPuzzle(
+                premise: ["The pizza costs more than the salad.", "The soup costs less than the salad."],
+                question: "What is the cheapest item?",
+                options: ["Pizza", "Salad", "Soup", "Cannot determine"],
+                correctIndex: 2,
+                explanation: "Pizza > Salad > Soup, so soup is cheapest."
+            ),
+            LogicPuzzle(
+                premise: ["If you exercise, you get stronger.", "Sam exercises every day."],
+                question: "What can we conclude about Sam?",
+                options: ["Sam is weak", "Sam gets stronger", "Sam is tired", "Nothing"],
+                correctIndex: 1,
+                explanation: "Since exercising makes you stronger and Sam exercises, Sam gets stronger."
+            ),
+            LogicPuzzle(
+                premise: ["All roses are flowers.", "All flowers need water."],
+                question: "What can we conclude about roses?",
+                options: ["Roses don't need water", "Roses need water", "Roses are red", "Nothing"],
+                correctIndex: 1,
+                explanation: "Roses are flowers, and all flowers need water, so roses need water."
+            ),
+            LogicPuzzle(
+                premise: ["Max runs faster than Lily.", "Lily runs faster than Noah."],
+                question: "Who runs the slowest?",
+                options: ["Max", "Lily", "Noah", "Cannot determine"],
+                correctIndex: 2,
+                explanation: "Max > Lily > Noah in speed, so Noah is slowest."
+            ),
         ],
-        // Level 2 - More complex
+        // Level 2 - More complex (10 puzzles)
         [
             LogicPuzzle(
                 premise: ["Either John or Mary took the last cookie.", "John was at work all day."],
@@ -92,8 +134,50 @@ struct LogicPuzzleGame: View {
                 correctIndex: 0,
                 explanation: "D before A, A before B, B before C gives us D, A, B, C."
             ),
+            LogicPuzzle(
+                premise: ["No fish can walk.", "A salmon is a fish."],
+                question: "What can we conclude about salmon?",
+                options: ["Salmon can walk", "Salmon cannot walk", "Salmon can fly", "Nothing"],
+                correctIndex: 1,
+                explanation: "No fish can walk and salmon is a fish, so salmon cannot walk."
+            ),
+            LogicPuzzle(
+                premise: ["If it's a weekday, the store is open.", "If the store is open, I can buy milk.", "Today is Wednesday."],
+                question: "Can I buy milk today?",
+                options: ["No", "Yes", "Maybe", "Cannot determine"],
+                correctIndex: 1,
+                explanation: "Wednesday is a weekday, so the store is open, so I can buy milk."
+            ),
+            LogicPuzzle(
+                premise: ["Either the bus or the train is late.", "The train arrived on time."],
+                question: "What can we conclude?",
+                options: ["The bus is on time", "The bus is late", "Both are late", "Nothing"],
+                correctIndex: 1,
+                explanation: "Since one must be late and the train is on time, the bus must be late."
+            ),
+            LogicPuzzle(
+                premise: ["All planets orbit the sun.", "Earth is a planet.", "The moon orbits Earth."],
+                question: "What MUST be true?",
+                options: ["The moon orbits the sun", "Earth orbits the sun", "The moon is a planet", "Nothing"],
+                correctIndex: 1,
+                explanation: "Earth is a planet, and all planets orbit the sun, so Earth orbits the sun."
+            ),
+            LogicPuzzle(
+                premise: ["Red is left of Blue.", "Green is right of Blue.", "Yellow is left of Red."],
+                question: "What is the order from left to right?",
+                options: ["Yellow, Red, Blue, Green", "Red, Yellow, Blue, Green", "Green, Blue, Red, Yellow", "Blue, Red, Yellow, Green"],
+                correctIndex: 0,
+                explanation: "Yellow is left of Red, Red is left of Blue, Blue is left of Green."
+            ),
+            LogicPuzzle(
+                premise: ["All squares are rectangles.", "All rectangles have four sides.", "This shape is a square."],
+                question: "How many sides does this shape have?",
+                options: ["Three", "Four", "Five", "Cannot determine"],
+                correctIndex: 1,
+                explanation: "Squares are rectangles, rectangles have four sides, so this square has four sides."
+            ),
         ],
-        // Level 3 - Complex puzzles
+        // Level 3 - Complex puzzles (10 puzzles)
         [
             LogicPuzzle(
                 premise: ["If it's sunny, I go to the beach.", "If I go to the beach, I get a tan.", "I did not get a tan."],
@@ -122,6 +206,48 @@ struct LogicPuzzleGame: View {
                 options: ["Tom", "Jane", "Mike", "Sara"],
                 correctIndex: 3,
                 explanation: "Order: Tom > Jane > Mike > Sara > Lee. Second youngest is Sara."
+            ),
+            LogicPuzzle(
+                premise: ["If A, then B.", "If B, then C.", "If C, then D.", "D is false."],
+                question: "What can we conclude about A?",
+                options: ["A is true", "A is false", "A might be true", "Cannot determine"],
+                correctIndex: 1,
+                explanation: "If D is false, then C must be false, then B must be false, then A must be false."
+            ),
+            LogicPuzzle(
+                premise: ["All managers attend meetings.", "No interns attend meetings.", "Chris attends meetings."],
+                question: "What can we conclude about Chris?",
+                options: ["Chris is an intern", "Chris is not an intern", "Chris is a manager", "Nothing certain"],
+                correctIndex: 1,
+                explanation: "Since no interns attend meetings and Chris attends meetings, Chris is not an intern."
+            ),
+            LogicPuzzle(
+                premise: ["Either the red wire or the blue wire is live.", "If the red wire is live, the alarm sounds.", "The alarm is silent."],
+                question: "Which wire is live?",
+                options: ["Red wire", "Blue wire", "Both", "Neither"],
+                correctIndex: 1,
+                explanation: "If red were live, the alarm would sound. The alarm is silent, so red is not live. Thus blue is live."
+            ),
+            LogicPuzzle(
+                premise: ["X is north of Y.", "Z is east of Y.", "W is south of Z.", "W is east of Y."],
+                question: "Which location is furthest west?",
+                options: ["X", "Y", "Z", "W"],
+                correctIndex: 1,
+                explanation: "Z and W are east of Y, X is north of Y (same longitude). Y is furthest west."
+            ),
+            LogicPuzzle(
+                premise: ["Some artists are musicians.", "All musicians practice daily.", "Jane is an artist who practices daily."],
+                question: "Is Jane a musician?",
+                options: ["Yes, definitely", "No, definitely not", "Maybe", "Cannot determine"],
+                correctIndex: 3,
+                explanation: "Jane practices daily, but we can't conclude she's a musician—she might practice art daily."
+            ),
+            LogicPuzzle(
+                premise: ["If guilty, then evidence exists.", "If evidence exists, then arrested.", "Not arrested."],
+                question: "What can we conclude?",
+                options: ["Guilty", "Not guilty", "Evidence exists", "Cannot determine"],
+                correctIndex: 1,
+                explanation: "Not arrested → no evidence → not guilty (contrapositive chain)."
             ),
         ]
     ]

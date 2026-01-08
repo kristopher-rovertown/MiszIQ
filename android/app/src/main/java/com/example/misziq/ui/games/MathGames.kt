@@ -256,16 +256,51 @@ fun EstimationGame(
 ) {
     data class Question(val prompt: String, val actual: Float, val unit: String, val min: Float, val max: Float)
     val questions = listOf(
+        // Quantities
         Question("Keys on a standard piano?", 88f, "keys", 40f, 120f),
         Question("Bones in adult human body?", 206f, "bones", 100f, 350f),
         Question("Countries in Africa?", 54f, "countries", 20f, 80f),
         Question("Cards in a standard deck?", 52f, "cards", 30f, 80f),
+        Question("Teeth in adult human?", 32f, "teeth", 16f, 48f),
+        Question("Chromosomes in human cell?", 46f, "chromosomes", 20f, 80f),
+        Question("Elements in periodic table?", 118f, "elements", 80f, 150f),
+        Question("Squares on a chess board?", 64f, "squares", 36f, 100f),
+        Question("Players on a soccer team?", 11f, "players", 5f, 18f),
+        Question("Letters in English alphabet?", 26f, "letters", 20f, 35f),
+        // Percentages
         Question("Percent of Earth covered by water?", 71f, "%", 40f, 95f),
+        Question("Percent of human body is water?", 60f, "%", 30f, 90f),
+        Question("Percent of atmosphere is nitrogen?", 78f, "%", 40f, 100f),
+        Question("Percent of brain is fat?", 60f, "%", 20f, 80f),
+        Question("Percent of Earth is forest?", 31f, "%", 10f, 60f),
+        Question("Percent of oxygen in air?", 21f, "%", 10f, 40f),
+        // Distances/Sizes
         Question("Height of Eiffel Tower (meters)?", 330f, "m", 150f, 500f),
+        Question("Length of marathon (km)?", 42f, "km", 20f, 60f),
+        Question("Speed of sound (m/s)?", 343f, "m/s", 200f, 500f),
+        Question("Height of Mt Everest (meters)?", 8849f, "m", 6000f, 12000f),
+        Question("Depth of Mariana Trench (m)?", 10994f, "m", 5000f, 15000f),
+        Question("Diameter of Moon (km)?", 3474f, "km", 2000f, 5000f),
+        Question("Average ocean depth (meters)?", 3688f, "m", 1500f, 6000f),
+        Question("Olympic pool length (meters)?", 50f, "m", 25f, 100f),
+        // Time
         Question("Days in a year?", 365f, "days", 300f, 400f),
+        Question("Human heart beats per minute?", 72f, "bpm", 40f, 120f),
+        Question("Daylight hours at equator equinox?", 12f, "hours", 6f, 18f),
+        Question("Average human lifespan (years)?", 73f, "years", 50f, 100f),
+        Question("Seconds in an hour?", 3600f, "seconds", 2000f, 5000f),
+        Question("Hours a koala sleeps per day?", 22f, "hours", 10f, 24f),
+        // Misc
         Question("US states?", 50f, "states", 30f, 70f),
         Question("Boiling point of water (°C)?", 100f, "°C", 60f, 150f),
-        Question("Minutes in a day?", 1440f, "min", 800f, 2000f)
+        Question("Freezing point of water (°F)?", 32f, "°F", 0f, 60f),
+        Question("Minutes in a day?", 1440f, "min", 800f, 2000f),
+        Question("Muscles in human body?", 600f, "muscles", 300f, 900f),
+        Question("Speed of light (km/s)?", 300000f, "km/s", 150000f, 400000f),
+        Question("Average Mars temperature (°C)?", -60f, "°C", -120f, 0f),
+        Question("Taste buds on tongue?", 10000f, "buds", 3000f, 20000f),
+        Question("Blue whale weight (tons)?", 150f, "tons", 50f, 250f),
+        Question("Species of birds?", 10000f, "species", 5000f, 20000f)
     )
     
     var gameState by remember { mutableStateOf(GameState.INSTRUCTIONS) }

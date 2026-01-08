@@ -172,11 +172,39 @@ fun LogicPuzzleGame(
 ) {
     data class Puzzle(val premises: List<String>, val question: String, val options: List<String>, val correctIdx: Int, val explanation: String)
     val puzzles = listOf(
+        // Level 1 - Simple comparisons
         Puzzle(listOf("Alice is taller than Bob.", "Bob is taller than Carol."), "Who is shortest?", listOf("Alice", "Bob", "Carol", "Unknown"), 2, "Carol < Bob < Alice"),
         Puzzle(listOf("All cats are animals.", "Whiskers is a cat."), "Is Whiskers an animal?", listOf("Yes", "No", "Maybe", "Unknown"), 0, "All cats are animals, Whiskers is a cat."),
         Puzzle(listOf("If it rains, the ground gets wet.", "It is raining."), "Is the ground wet?", listOf("Yes", "No", "Maybe", "Unknown"), 0, "If P then Q, P is true, so Q is true."),
+        Puzzle(listOf("All birds have feathers.", "Sparrows are birds."), "Do sparrows have feathers?", listOf("Yes", "No", "Maybe", "Unknown"), 0, "Sparrows are birds, all birds have feathers."),
+        Puzzle(listOf("Emma is older than Fiona.", "Grace is older than Emma."), "Who is oldest?", listOf("Emma", "Fiona", "Grace", "Unknown"), 2, "Grace > Emma > Fiona"),
+        Puzzle(listOf("Pizza costs more than salad.", "Soup costs less than salad."), "What's cheapest?", listOf("Pizza", "Salad", "Soup", "Unknown"), 2, "Pizza > Salad > Soup"),
+        Puzzle(listOf("If you exercise, you get stronger.", "Sam exercises every day."), "What about Sam?", listOf("Gets weaker", "Gets stronger", "No change", "Unknown"), 1, "Exercise → stronger, Sam exercises."),
+        Puzzle(listOf("All roses are flowers.", "All flowers need water."), "Do roses need water?", listOf("Yes", "No", "Maybe", "Unknown"), 0, "Roses are flowers, flowers need water."),
+        Puzzle(listOf("Max runs faster than Lily.", "Lily runs faster than Noah."), "Who is slowest?", listOf("Max", "Lily", "Noah", "Unknown"), 2, "Max > Lily > Noah in speed."),
+        Puzzle(listOf("Red box is heavier than blue.", "Green box is lighter than blue."), "What's heaviest?", listOf("Red", "Blue", "Green", "Unknown"), 0, "Red > Blue > Green"),
+        // Level 2 - More complex
         Puzzle(listOf("Either John or Mary took the cookie.", "John was at work all day."), "Who took it?", listOf("John", "Mary", "Both", "Neither"), 1, "John couldn't have, so Mary did."),
-        Puzzle(listOf("All doctors are smart.", "Dr. Smith is a doctor."), "Is Dr. Smith smart?", listOf("Yes", "No", "Maybe", "Unknown"), 0, "All doctors are smart.")
+        Puzzle(listOf("All doctors are smart.", "Dr. Smith is a doctor."), "Is Dr. Smith smart?", listOf("Yes", "No", "Maybe", "Unknown"), 0, "All doctors are smart."),
+        Puzzle(listOf("Meeting is Monday or Tuesday.", "If Monday, bring coffee.", "You don't need coffee."), "When is meeting?", listOf("Monday", "Tuesday", "Wednesday", "Unknown"), 1, "No coffee needed, so not Monday."),
+        Puzzle(listOf("A is before B.", "C is after B.", "D is before A."), "Correct order?", listOf("D,A,B,C", "A,B,C,D", "D,B,A,C", "C,B,A,D"), 0, "D before A before B before C."),
+        Puzzle(listOf("No fish can walk.", "Salmon is a fish."), "Can salmon walk?", listOf("Yes", "No", "Maybe", "Unknown"), 1, "No fish walk, salmon is fish."),
+        Puzzle(listOf("If weekday, store is open.", "If store open, can buy milk.", "Today is Wednesday."), "Can buy milk?", listOf("No", "Yes", "Maybe", "Unknown"), 1, "Wednesday → open → milk."),
+        Puzzle(listOf("Either bus or train is late.", "Train arrived on time."), "What's late?", listOf("Train", "Bus", "Both", "Neither"), 1, "Train on time, one must be late."),
+        Puzzle(listOf("All planets orbit the sun.", "Earth is a planet."), "Does Earth orbit sun?", listOf("Yes", "No", "Maybe", "Unknown"), 0, "Earth is a planet."),
+        Puzzle(listOf("Red is left of Blue.", "Green is right of Blue.", "Yellow is left of Red."), "Order left to right?", listOf("Y,R,B,G", "R,Y,B,G", "G,B,R,Y", "B,R,Y,G"), 0, "Yellow < Red < Blue < Green"),
+        Puzzle(listOf("All squares are rectangles.", "Rectangles have 4 sides.", "This is a square."), "How many sides?", listOf("3", "4", "5", "Unknown"), 1, "Square = rectangle = 4 sides."),
+        // Level 3 - Complex puzzles
+        Puzzle(listOf("If sunny, I go to beach.", "If beach, I get tan.", "I didn't get tan."), "Was it sunny?", listOf("Yes", "No", "Maybe", "Unknown"), 1, "No tan → no beach → not sunny."),
+        Puzzle(listOf("Students who study pass.", "Alex didn't pass.", "Beth studied."), "Did Alex study?", listOf("Yes", "No", "Maybe", "Unknown"), 1, "Alex didn't pass, so didn't study."),
+        Puzzle(listOf("No reptiles have fur.", "All snakes are reptiles."), "Do snakes have fur?", listOf("Yes", "No", "Maybe", "Unknown"), 1, "Snakes are reptiles, no fur."),
+        Puzzle(listOf("Tom > Jane in age.", "Jane > Mike in age.", "Sara < Mike, Sara > Lee."), "Second youngest?", listOf("Tom", "Jane", "Mike", "Sara"), 3, "Tom > Jane > Mike > Sara > Lee"),
+        Puzzle(listOf("If A then B.", "If B then C.", "If C then D.", "D is false."), "Is A true?", listOf("Yes", "No", "Maybe", "Unknown"), 1, "D false → C false → B false → A false."),
+        Puzzle(listOf("All managers attend meetings.", "No interns attend meetings.", "Chris attends meetings."), "Is Chris an intern?", listOf("Yes", "No", "Maybe", "Unknown"), 1, "Chris attends, interns don't."),
+        Puzzle(listOf("Red wire or blue wire is live.", "If red live, alarm sounds.", "Alarm is silent."), "Which wire is live?", listOf("Red", "Blue", "Both", "Neither"), 1, "Silent alarm → red not live → blue live."),
+        Puzzle(listOf("X is north of Y.", "Z is east of Y.", "W is south of Z and east of Y."), "What's furthest west?", listOf("X", "Y", "Z", "W"), 1, "Z and W are east of Y."),
+        Puzzle(listOf("Some artists are musicians.", "All musicians practice daily.", "Jane is an artist who practices daily."), "Is Jane a musician?", listOf("Yes", "No", "Maybe", "Unknown"), 3, "Jane might practice art, not music."),
+        Puzzle(listOf("If guilty, evidence exists.", "If evidence, arrested.", "Not arrested."), "Is the person guilty?", listOf("Yes", "No", "Maybe", "Unknown"), 1, "Not arrested → no evidence → not guilty.")
     )
     
     var gameState by remember { mutableStateOf(GameState.INSTRUCTIONS) }

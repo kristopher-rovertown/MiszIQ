@@ -27,7 +27,7 @@ struct WordScrambleGame: View {
     }
     
     let wordsByLevel: [[String: String]] = [
-        // Level 1 - 4-5 letter words
+        // Level 1 - 4-5 letter words (20 words)
         [
             "apple": "A common fruit",
             "house": "Where people live",
@@ -38,9 +38,19 @@ struct WordScrambleGame: View {
             "music": "Audible art form",
             "cloud": "In the sky",
             "river": "Flowing water",
-            "dream": "Happens during sleep"
+            "dream": "Happens during sleep",
+            "light": "Opposite of dark",
+            "stone": "Hard rock material",
+            "beach": "Sandy shore",
+            "storm": "Severe weather",
+            "flame": "Fire produces this",
+            "grape": "Small purple fruit",
+            "train": "Runs on tracks",
+            "smile": "Happy expression",
+            "globe": "Model of Earth",
+            "clock": "Tells time"
         ],
-        // Level 2 - 6-7 letter words
+        // Level 2 - 6-7 letter words (20 words)
         [
             "garden": "Where flowers grow",
             "window": "See through wall opening",
@@ -51,9 +61,19 @@ struct WordScrambleGame: View {
             "summer": "Warm season",
             "wonder": "Feeling of amazement",
             "castle": "Medieval fortress",
-            "planet": "Orbits a star"
+            "planet": "Orbits a star",
+            "frozen": "Very cold state",
+            "island": "Land surrounded by water",
+            "tunnel": "Underground passage",
+            "basket": "Container with handle",
+            "rocket": "Space vehicle",
+            "jungle": "Dense tropical forest",
+            "puzzle": "Brain teaser",
+            "blanket": "Warm bed cover",
+            "crystal": "Clear mineral",
+            "dolphin": "Intelligent sea mammal"
         ],
-        // Level 3 - 8+ letter words
+        // Level 3 - 8+ letter words (20 words)
         [
             "mountain": "Very tall landform",
             "elephant": "Large gray animal",
@@ -64,7 +84,17 @@ struct WordScrambleGame: View {
             "sandwich": "Food between bread",
             "dinosaur": "Extinct reptile",
             "hospital": "Medical facility",
-            "keyboard": "Typing device"
+            "keyboard": "Typing device",
+            "firework": "Explosive celebration",
+            "butterfly": "Colorful insect",
+            "lightning": "Electric sky flash",
+            "nightmare": "Bad dream",
+            "submarine": "Underwater vessel",
+            "chocolate": "Sweet brown treat",
+            "adventure": "Exciting journey",
+            "telescope": "Views distant stars",
+            "crocodile": "Large reptile",
+            "celebrate": "Mark special occasion"
         ]
     ]
     

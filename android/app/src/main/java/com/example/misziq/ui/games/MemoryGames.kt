@@ -245,7 +245,27 @@ fun WordRecallGame(
     var startTime by remember { mutableLongStateOf(0L) }
     val scope = rememberCoroutineScope()
     
-    val wordBank = listOf("apple","river","mountain","garden","bridge","castle","forest","ocean","sunset","thunder","crystal","shadow","whisper","journey","harmony","mystery","village","temple","dragon","phoenix","meadow","canyon","island","desert","palace","harbor","valley","glacier","volcano","rainbow")
+    val wordBank = listOf(
+        // Common nouns - Nature
+        "apple", "river", "mountain", "garden", "bridge", "castle", "forest", "ocean",
+        "sunset", "thunder", "crystal", "shadow", "whisper", "journey", "harmony", "mystery",
+        "village", "temple", "dragon", "phoenix", "meadow", "canyon", "island", "desert",
+        "palace", "harbor", "valley", "glacier", "volcano", "rainbow", "lantern", "compass",
+        // Common nouns - Objects
+        "anchor", "blanket", "candle", "diamond", "feather", "guitar", "hammer", "jacket",
+        "ladder", "mirror", "needle", "pillow", "ribbon", "saddle", "trumpet", "velvet",
+        // Common nouns - Animals
+        "falcon", "giraffe", "dolphin", "panther", "penguin", "sparrow", "tiger", "whale",
+        "buffalo", "cheetah", "leopard", "mustang", "peacock", "raccoon", "serpent", "vulture",
+        // Common nouns - Places
+        "airport", "bakery", "chapel", "factory", "gallery", "library", "museum", "stadium",
+        "theater", "tunnel", "citadel", "fortress", "kingdom", "mansion", "pyramid", "sanctuary",
+        // Abstract concepts
+        "freedom", "wisdom", "courage", "silence", "wonder", "patience", "kindness", "strength",
+        "balance", "clarity", "serenity", "passion", "triumph", "legacy", "vision", "spirit",
+        "destiny", "eternity", "fantasy", "gratitude", "honesty", "infinity", "justice", "loyalty",
+        "memory", "nobility", "promise", "quality", "reality", "success", "truth", "virtue"
+    )
     val wordsCount = 4 + level
     
     fun startRound() {
