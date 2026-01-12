@@ -32,6 +32,7 @@ class SettingsDataStore(private val context: Context) {
         private val SOUND_EFFECTS_ENABLED = booleanPreferencesKey("sound_effects_enabled")
         private val HAPTIC_FEEDBACK_ENABLED = booleanPreferencesKey("haptic_feedback_enabled")
         private val THEME_MODE = stringPreferencesKey("theme_mode")
+        private val HAS_COMPLETED_ONBOARDING = booleanPreferencesKey("has_completed_onboarding")
     }
 
     val musicEnabled: Flow<Boolean> = context.dataStore.data.map { preferences ->
@@ -55,6 +56,10 @@ class SettingsDataStore(private val context: Context) {
         }
     }
 
+    val hasCompletedOnboarding: Flow<Boolean> = context.dataStore.data.map { preferences ->
+        preferences[HAS_COMPLETED_ONBOARDING] ?: false
+    }
+
     suspend fun setMusicEnabled(enabled: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[MUSIC_ENABLED] = enabled
@@ -76,6 +81,12 @@ class SettingsDataStore(private val context: Context) {
     suspend fun setThemeMode(mode: ThemeMode) {
         context.dataStore.edit { preferences ->
             preferences[THEME_MODE] = mode.name
+        }
+    }
+
+    suspend fun setHasCompletedOnboarding(completed: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[HAS_COMPLETED_ONBOARDING] = completed
         }
     }
 }

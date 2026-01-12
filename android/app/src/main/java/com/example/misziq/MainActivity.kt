@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import kotlinx.coroutines.launch
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -87,13 +88,30 @@ fun MiszIQApp(
     hapticManager: HapticManager
 ) {
     var showSplash by remember { mutableStateOf(true) }
+    var showOnboarding by remember { mutableStateOf(false) }
+    val hasCompletedOnboarding by settingsDataStore.hasCompletedOnboarding.collectAsState(initial = true)
+    val coroutineScope = rememberCoroutineScope()
     val navController = rememberNavController()
     var currentProfileId by remember { mutableStateOf<String?>(null) }
     var currentProfileName by remember { mutableStateOf("") }
 
     if (showSplash) {
         SplashScreen(
-            onSplashComplete = { showSplash = false }
+            onSplashComplete = {
+                showSplash = false
+                if (!hasCompletedOnboarding) {
+                    showOnboarding = true
+                }
+            }
+        )
+    } else if (showOnboarding) {
+        OnboardingScreen(
+            onComplete = {
+                coroutineScope.launch {
+                    settingsDataStore.setHasCompletedOnboarding(true)
+                }
+                showOnboarding = false
+            }
         )
     } else {
         NavHost(navController = navController, startDestination = "profile_selection") {

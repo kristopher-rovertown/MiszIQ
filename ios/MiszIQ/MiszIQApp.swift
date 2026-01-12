@@ -5,6 +5,8 @@ import SwiftData
 struct MiszIQApp: App {
     @StateObject private var settings = SettingsManager.shared
     @State private var showSplash = true
+    @State private var showOnboarding = false
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -35,14 +37,28 @@ struct MiszIQApp: App {
                         AudioManager.shared.resumeBackgroundMusic()
                     }
 
-                if showSplash {
-                    SplashScreen {
+                if showOnboarding {
+                    OnboardingView {
+                        hasCompletedOnboarding = true
                         withAnimation(.easeOut(duration: 0.4)) {
-                            showSplash = false
+                            showOnboarding = false
                         }
                     }
                     .transition(.opacity)
                     .zIndex(1)
+                }
+
+                if showSplash {
+                    SplashScreen {
+                        withAnimation(.easeOut(duration: 0.4)) {
+                            showSplash = false
+                            if !hasCompletedOnboarding {
+                                showOnboarding = true
+                            }
+                        }
+                    }
+                    .transition(.opacity)
+                    .zIndex(2)
                 }
             }
         }
